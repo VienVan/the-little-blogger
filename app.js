@@ -1,8 +1,13 @@
 console.log('linked');
-var blog = document.getElementById('blog-post').value;
-var form = document.querySelector('#button');
 
+var button = document.getElementById('changeText');
+var blogPost = document.getElementById('blog').value;
+var posts = [];
 
-form.addEventListener('clicked', function(e) {
-    console.log(blog);
+function addPosts() {
+  var blogPost = document.getElementById('blog').value;
+  posts.push(blogPost);
+}
+button.addEventListener('click', function() {
+  addPosts();
 })
