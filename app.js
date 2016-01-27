@@ -13,9 +13,10 @@ function addPostToArray() {
 
 function createList() {
     for (var i = 0; i < posts.length; i++) {
-      ul.innerHTML += "<li>" + posts[i] + "</li>";
-      postCounter++;
+      var innerHTML = innerHTML + "<li>" + posts[i] + "</li>";
   }
+  postCounter++;
+  ul.innerHTML = innerHTML;
   h2.innerHTML = postCounter;
 }
 

@@ -1,3 +1,31 @@
-/*body {
-  background: red;
-}*/
+body {
+  width: 100%;
+  position: relative;
+}
+.wrapper {
+  border: 1px solid red;
+  width: 90%;
+  margin: auto;
+}
+h1 {
+  text-align: center;
+}
+input {
+  width: 50%;
+  padding: 10px;
+  font-size: 20px;
+  display: block;
+  margin: auto;
+}
+
+#postBtn {
+  width: 20%;
+  margin: 20px auto;
+  font-size: 30px;
+  display: block;
+}
+
+ul {
+  list-style: none;
+  text-align: center;
+}
