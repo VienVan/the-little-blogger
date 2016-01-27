@@ -1,31 +1,57 @@
 body {
   width: 100%;
   position: relative;
+  font-family: Rokkitt;
+  background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url('https://static.pexels.com/photos/19578/pexels-photo.jpg');
+  background-size: cover;
+  color: white;
+  background-attachment: fixed;
 }
 .wrapper {
-  border: 1px solid red;
   width: 90%;
   margin: auto;
 }
-h1 {
+h1, h2, p {
   text-align: center;
+  letter-spacing: 6px;
 }
+h1 {
+  font-size: 60px;
+}
+
 input {
   width: 50%;
-  padding: 10px;
+  padding: 5px;
   font-size: 20px;
+  font-family: Rokkitt;
   display: block;
   margin: auto;
 }
 
+
 #postBtn {
   width: 20%;
   margin: 20px auto;
-  font-size: 30px;
+  font-size: 25px;
   display: block;
+  font-family: Rokkitt;
+  padding: 5px;
+  /*background: linear-gradient(rgba(100, 100, 100, .5), rgba(255, 255, 255, .5));*/
+
 }
 
 ul {
   list-style: none;
   text-align: center;
+  margin-left: 0;
+  padding-left: 0;
+  padding-bottom: 20px;
+}
+ul li {
+  width: 50%;
+  padding: 20px;
+  font-size: 25px;
+  border-bottom: 1px solid white;
+  margin: auto;
+  padding-bottom: 20px;
 }
