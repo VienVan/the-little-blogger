@@ -6,17 +6,19 @@ var postCounter = 0;
 var ul = document.getElementById('blog-list');
 var h2 = document.getElementById('postCounter');
 
+
 function addPostToArray() {
       var blogPost = document.getElementById('blog').value;
       posts.push(blogPost);
 }
 
 function createList() {
+    var text='';
     for (var i = 0; i < posts.length; i++) {
-      var innerHTML = innerHTML + "<li>" + posts[i] + "</li>";
+    text += "<li>" + posts[i] + "</li>";
   }
   postCounter++;
-  ul.innerHTML = innerHTML;
+  ul.innerHTML = text;
   h2.innerHTML = postCounter;
 }
 
