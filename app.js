@@ -20,6 +20,9 @@ function createList() {
   postCounter++;
   ul.innerHTML = text;
   h2.innerHTML = postCounter;
+  if (postCounter === 6) {
+    alert("Please refresh the page!");
+  }
 }
 
 button.addEventListener('click', function(e) {
