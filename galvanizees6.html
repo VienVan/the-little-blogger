@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
+	<script type="text/babel">
+			// var x = 10;
+			// if(x) {
+			// 	let x = 4;
+			// 	console.log(x); log 4
+			// }
+			// console.log(x); log 10
+			// function print(firstName) {
+			// 	console.log(`Hello ${firstName}`);
+			// }
+			// print('Adele');
+			//
+			// function createEmail(firstName, purchasePrice) {
+			// 	var shipping = 5.95;
+			// 	console.log(`Hi ${firstName}, Thanks for buying from us!
+      //               Total: $${purchasePrice}
+			// 							Shipping: $${shipping}
+			// 							Grand Total: $${purchasePrice + shipping}`
+			// 				);
+			// }
+			// createEmail("Vien", 20.00);
+
+			// var adeleSongs = ['Hello', 'Set Fire To The Rain', 'Rolling In The Deep', 'Someone Like You'];
+			// var alcoholicBeverages = ['beer', 'wine', 'rum', 'tequila', 'scotch'];
+			// var groceries = [...adeleSongs, ...alcoholicBeverages, 'smoked salmon', 'cream cheese', 'bagel', 'bacon', 'capers', 'red onions'];
+			// /// ... is the spread method, add array as part of the array
+			// var i = [1,2,3,4]
+			// var x = ...i;
+			// console.log(typeof x);//error
+			//
+			// function add(x=2,y){ //set default, not permanent, but is defaulted
+			// 	console.log(x+y)
+			// }
+			// var arr = [5,9];
+			// add(undefined, 30); //can call without arguments, will take default parameters
+
+			// var studentList = function(students) { //doesn't need
+			// 	console.log(students);
+			// }
+
+			// var studentList = students => console.log(students);
+			// studentList(['Joe', 'Jean']);
+			//
+			// use (let i = 0;) instead of (var i =0;) to block the scope of i
+
+			for(let i = 0; i < 45; i++) {
+				var div = document.createElement('div');
+				div.onclick=function () {
+					alert('you clicked on a box #' + i);
+				}
+				document.getElementsByTagName('section')[0].appendChild(div);
+			}
+
+  </script>
+	<title>Template</title>
+</head>
+<body>
+</body>
+</html>

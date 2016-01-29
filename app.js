@@ -1,32 +1,45 @@
 console.log('linked');
 
-var button = document.getElementById('postBtn');
+var button = $('#postBtn');
 var posts = [];
 var postCounter = 0;
-var ul = document.getElementById('blog-list');
-var h2 = document.getElementById('postCounter');
+var ul = $('#blog-list');
+var h2 = $('#postCounter');
 
 
 function addPostToArray() {
-      var blogPost = document.getElementById('blog').value;
+      var blogPost = $('#blog').val();
       posts.push(blogPost);
 }
+function addToLocalStorage() {
+    for (var i = 0; i < posts.length; i++) {
 
+    }
+}
 function createList() {
     var text='';
     for (var i = 0; i < posts.length; i++) {
     text += "<li>" + posts[i] + "</li>";
+    localStorage.setItem(i, posts[i]);
   }
+
   postCounter++;
-  ul.innerHTML = text;
-  h2.innerHTML = postCounter;
+  ul.html(text);
+  h2.html(postCounter);
   if (postCounter === 6) {
     alert("Please refresh the page!");
   }
 }
 
-button.addEventListener('click', function(e) {
+button.on('click', function(e) {
       e.preventDefault();
       addPostToArray();
       createList();
+      addToLocalStorage();
+})
+
+$('#clearBtn').on('click', function() {
+
+  localStorage.clear();
+  window.location.reload();
 })
