@@ -8,34 +8,31 @@ var h2 = $('#postCounter');
 
 
 function addPostToArray() {
-      var blogPost = $('#blog').val();
-      posts.push(blogPost);
+  var blogPost = $('#blog').val();
+  posts.push(blogPost);
 }
-function addToLocalStorage() {
-    for (var i = 0; i < posts.length; i++) {
 
-    }
-}
+
 function createList() {
-    var text='';
-    for (var i = 0; i < posts.length; i++) {
+  var text = '';
+  for (var i = 0; i < posts.length; i++) {
     text += "<li>" + posts[i] + "</li>";
-    localStorage.setItem(i, posts[i]);
+    localStorage.setItem('Post ' + i, posts[i]);
   }
 
   postCounter++;
   ul.html(text);
-  h2.html(postCounter);
+  h2.html(postCounter + ' posts');
   if (postCounter === 6) {
     alert("Please refresh the page!");
   }
 }
 
 button.on('click', function(e) {
-      e.preventDefault();
-      addPostToArray();
-      createList();
-      addToLocalStorage();
+  e.preventDefault();
+  addPostToArray();
+  createList();
+  addToLocalStorage();
 })
 
 $('#clearBtn').on('click', function() {
