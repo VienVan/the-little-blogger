@@ -24,15 +24,16 @@ function createList() {
   ul.html(text);
   h2.html(postCounter + ' posts');
   if (postCounter === 6) {
-    alert("Please refresh the page!");
+    window.location.reload();
   }
 }
 
 button.on('click', function(e) {
+  console.log("hitting the button");
   e.preventDefault();
   addPostToArray();
   createList();
-  addToLocalStorage();
+  // addToLocalStorage();
 })
 
 $('#clearBtn').on('click', function() {
